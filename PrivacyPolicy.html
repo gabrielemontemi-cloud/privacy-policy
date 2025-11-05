@@ -2,67 +2,329 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Privacy Policy – Beat The Tower</title>
+  <style>
+    body{font-family:-apple-system,Arial,sans-serif;max-width:900px;margin:40px auto;line-height:1.6;color:#eee;background:#111;padding:20px;border-radius:12px}
+    h1,h2,h3{color:#00ffff;margin-top:24px}
+    .lang-switch{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 24px}
+    .lang-btn{border:1px solid #00ffff;background:transparent;color:#00ffff;padding:6px 10px;border-radius:8px;cursor:pointer}
+    .lang-btn.active{background:#00ffff;color:#111;font-weight:700}
+    .lang{display:none}
+    .lang.active{display:block}
+    a{color:#00ffff}
+    hr{border:none;border-top:1px solid #333;margin:30px 0}
+    small.mono{font-family:ui-monospace,Menlo,Consolas,monospace;color:#bbb}
+  </style>
 </head>
-<body style="font-family:-apple-system,Arial,sans-serif;max-width:800px;margin:40px auto;line-height:1.6;color:#eee;background:#111;padding:20px;border-radius:12px;">
-  <h1 style="color:#00ffff;">Privacy Policy – Beat The Tower</h1>
-
+<body>
+  <h1>Privacy Policy – Beat The Tower</h1>
   <p><strong>Last updated:</strong> October 23, 2025</p>
 
-  <p><em>Beat The Tower</em> respects your privacy. This policy explains what information may be collected and how it is used when you play the game.</p>
+  <!-- Language Switcher -->
+  <div class="lang-switch" role="tablist" aria-label="Language Switcher">
+    <button class="lang-btn active" data-lang="en" role="tab" aria-selected="true">🇬🇧 English</button>
+    <button class="lang-btn" data-lang="it" role="tab" aria-selected="false">🇮🇹 Italiano</button>
+    <button class="lang-btn" data-lang="ja" role="tab" aria-selected="false">🇯🇵 日本語</button>
+    <button class="lang-btn" data-lang="ko" role="tab" aria-selected="false">🇰🇷 한국어</button>
+    <button class="lang-btn" data-lang="es" role="tab" aria-selected="false">🇪🇸 Español</button>
+  </div>
 
-  <h2 style="color:#00ffff;">1. What We Collect</h2>
-  <p>The app itself does <strong>not</strong> directly collect, store, or transmit personal information to our own servers. Game data like best score, settings (e.g., audio volume, haptics), and preferences (e.g., leaderboard consent) are saved locally on your device via <em>UserDefaults</em>.</p>
-  <p>However, the app integrates the following <strong>third-party services</strong>, which may process data to provide their features:</p>
+  <!-- 🇬🇧 English -->
+  <section class="lang active" id="lang-en" lang="en">
+    <p><em>Beat The Tower</em> respects your privacy. This policy explains what information may be collected and how it is used when you play the game.</p>
 
-  <h3 style="color:#00ffff;">1.1 Advertising (Google AdMob)</h3>
-  <p>We use <strong>Google AdMob</strong> for banner, interstitial, and <strong>rewarded ads</strong> (e.g., to grant an in-game “Shield”). Depending on your choice in Apple’s App Tracking Transparency (ATT) prompt, AdMob may process:</p>
-  <ul>
-    <li>Device identifiers (e.g., <strong>IDFA</strong>)</li>
-    <li>Approximate location and device information (to improve ad relevance)</li>
-    <li>Ad interaction data (views, clicks, impressions)</li>
-  </ul>
-  <p>If you <strong>deny tracking</strong>, ads are shown but are <strong>not personalized</strong>. Learn more: <a href="https://policies.google.com/technologies/ads" style="color:#00ffff;">Google AdMob Privacy &amp; Terms</a>.</p>
+    <h2>1. What We Collect</h2>
+    <p>The app itself does <strong>not</strong> directly collect, store, or transmit personal information to our own servers. Game data such as best score, settings (e.g., audio volume, haptics), and preferences (e.g., leaderboard consent) are saved locally on your device via <em>UserDefaults</em>.</p>
+    <p>However, the app integrates the following <strong>third-party services</strong>, which may process data to provide their features:</p>
 
-  <h3 style="color:#00ffff;">1.2 Game Center &amp; Leaderboards (Apple)</h3>
-  <p>The game can show a <strong>global leaderboard</strong> using <strong>Apple Game Center</strong>. Before any score is shared, the app shows an in-app dialog to obtain your <strong>explicit consent</strong>. This preference can be changed later in the in-game <em>Settings</em>.</p>
-  <ul>
-    <li><strong>If you agree:</strong> your score and a Game Center player identifier/alias (handled by Apple) may be submitted to Apple’s Game Center servers.</li>
-    <li><strong>If you do not agree or turn it off later:</strong> your scores remain on the device and are <em>not</em> uploaded.</li>
-  </ul>
-  <p>Learn more about Apple’s privacy: <a href="https://www.apple.com/legal/privacy/" style="color:#00ffff;">Apple Privacy</a>.</p>
+    <h3>1.1 Advertising (Google AdMob)</h3>
+    <p>We use <strong>Google AdMob</strong> for banner, interstitial, and <strong>rewarded ads</strong> (e.g., to grant an in-game “Shield”). Depending on your choice in Apple’s App Tracking Transparency (ATT) prompt, AdMob may process:</p>
+    <ul>
+      <li>Device identifiers (e.g., <strong>IDFA</strong>)</li>
+      <li>Approximate location and device information (to improve ad relevance)</li>
+      <li>Ad interaction data (views, clicks, impressions)</li>
+    </ul>
+    <p>If you <strong>deny tracking</strong>, ads are shown but are <strong>not personalized</strong>. Learn more: <a href="https://policies.google.com/technologies/ads">Google AdMob Privacy &amp; Terms</a>.</p>
 
-  <h3 style="color:#00ffff;">1.3 In-App Review Prompts (Apple)</h3>
-  <p>The game may occasionally ask you to <strong>rate or review</strong> the app using Apple’s <em>SKStoreReviewController</em> (for example, after a small number of completed runs). Apple controls whether to show the prompt; no personal data is collected by us through this feature.</p>
+    <h3>1.2 Game Center &amp; Leaderboards (Apple)</h3>
+    <p>The game can show a <strong>global leaderboard</strong> using <strong>Apple Game Center</strong>. Before any score is shared, the app shows an in-app dialog to obtain your <strong>explicit consent</strong>. This preference can be changed later in the in-game <em>Settings</em>.</p>
+    <ul>
+      <li><strong>If you agree:</strong> your score and a Game Center player identifier/alias (handled by Apple) may be submitted to Apple’s Game Center servers.</li>
+      <li><strong>If you do not agree or turn it off later:</strong> your scores remain on the device and are <em>not</em> uploaded.</li>
+    </ul>
+    <p>Learn more: <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>.</p>
 
-  <h2 style="color:#00ffff;">2. Your Choices &amp; Controls</h2>
-  <ul>
-    <li><strong>Ads / Tracking (ATT):</strong> On first launch we ask permission to allow ad tracking. If denied, ads are not personalized. You can change this in <em>iOS Settings → Privacy &amp; Security → Tracking</em>.</li>
-    <li><strong>Leaderboards Consent:</strong> The app shows an in-app consent dialog the first time. You can toggle this anytime in <em>Settings → “Global Leaderboard (share score)”</em>. If disabled, scores are not uploaded.</li>
-    <li><strong>Game Center account:</strong> Manage via <em>iOS Settings → Game Center</em> (you can sign out or adjust preferences).</li>
-    <li><strong>Audio &amp; Haptics:</strong> Manage inside the in-game <em>Settings</em>.</li>
-  </ul>
+    <h3>1.3 In-App Review Prompts (Apple)</h3>
+    <p>The game may occasionally ask you to <strong>rate or review</strong> the app using Apple’s <em>SKStoreReviewController</em>. Apple controls whether to show the prompt; no personal data is collected by us through this feature.</p>
 
-  <h2 style="color:#00ffff;">3. Rewarded Ads &amp; In-Game Items</h2>
-  <p>Watching a rewarded ad (via AdMob) can grant a cosmetic or gameplay item (e.g., a “Shield” that auto-rescues once). Ad viewing information may be processed by AdMob to deliver and account for the reward. If an ad is unavailable, no reward is granted.</p>
+    <h2>2. Your Choices &amp; Controls</h2>
+    <ul>
+      <li><strong>Ads / Tracking (ATT):</strong> On first launch we ask permission to allow ad tracking. If denied, ads are not personalized. You can change this in <em>iOS Settings → Privacy &amp; Security → Tracking</em>.</li>
+      <li><strong>Leaderboards Consent:</strong> The app shows an in-app consent dialog the first time. You can toggle this anytime in <em>Settings → “Global Leaderboard (share score)”</em>. If disabled, scores are not uploaded.</li>
+      <li><strong>Game Center account:</strong> Manage via <em>iOS Settings → Game Center</em>.</li>
+      <li><strong>Audio &amp; Haptics:</strong> Manage inside the in-game <em>Settings</em>.</li>
+    </ul>
 
-  <h2 style="color:#00ffff;">4. Data Retention</h2>
-  <p><em>Beat The Tower</em> does not operate its own servers for player accounts. Data processed by <strong>Google</strong> (AdMob) and <strong>Apple</strong> (Game Center, review prompts) follows their retention policies.</p>
+    <h2>3. Rewarded Ads &amp; In-Game Items</h2>
+    <p>Watching a rewarded ad (via AdMob) can grant an item (e.g., a “Shield” that auto-rescues once). Ad viewing information may be processed by AdMob to deliver and account for the reward. If an ad is unavailable, no reward is granted.</p>
 
-  <h2 style="color:#00ffff;">5. Children’s Privacy</h2>
-  <p>The game is a casual title but not directed specifically to children. If you are a parent or guardian and believe your child has provided information to any third-party service through the app, please review those services’ settings and policies and contact us if you have questions.</p>
+    <h2>4. Data Retention</h2>
+    <p><em>Beat The Tower</em> does not operate its own servers for player accounts. Data processed by <strong>Google</strong> (AdMob) and <strong>Apple</strong> (Game Center, review prompts) follows their retention policies.</p>
 
-  <h2 style="color:#00ffff;">6. Security</h2>
-  <p>Local data (scores, settings) is stored using iOS mechanisms like <em>UserDefaults</em>. Third-party services (Apple/Google) apply their own security measures to the data they handle.</p>
+    <h2>5. Children’s Privacy</h2>
+    <p>The game is a casual title but not directed specifically to children. Parents/guardians can review third-party settings and contact us with questions.</p>
 
-  <h2 style="color:#00ffff;">7. Changes to This Policy</h2>
-  <p>We may update this policy from time to time. Material changes will be reflected by updating the “Last updated” date above.</p>
+    <h2>6. Security</h2>
+    <p>Local data (scores, settings) is stored using iOS mechanisms like <em>UserDefaults</em>. Third-party services (Apple/Google) apply their own security measures.</p>
 
-  <h2 style="color:#00ffff;">8. Contact</h2>
-  <p>Questions or requests? Contact: <a href="mailto:gabrielemonte.mi@gmail.com" style="color:#00ffff;">gabrielemonte.mi@gmail.com</a></p>
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Material changes will be reflected by updating the “Last updated” date above.</p>
 
-  <hr style="border:none;border-top:1px solid #333;margin:30px 0;" />
+    <h2>8. Contact</h2>
+    <p>Questions or requests? Contact: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+  </section>
+
+  <!-- 🇮🇹 Italiano -->
+  <section class="lang" id="lang-it" lang="it">
+    <p><em>Beat The Tower</em> rispetta la tua privacy. Questa informativa spiega quali informazioni possono essere trattate e come vengono utilizzate quando giochi.</p>
+
+    <h2>1. Cosa Raccogliamo</h2>
+    <p>L’app <strong>non</strong> raccoglie, conserva o trasmette direttamente dati personali ai nostri server. Dati di gioco come punteggio migliore, impostazioni (volume audio, vibrazione) e preferenze (consenso classifica) sono salvati in locale sul dispositivo tramite <em>UserDefaults</em>.</p>
+    <p>L’app integra però alcuni <strong>servizi di terze parti</strong>, che possono trattare dati per fornire le loro funzionalità:</p>
+
+    <h3>1.1 Pubblicità (Google AdMob)</h3>
+    <p>Usiamo <strong>Google AdMob</strong> per banner, interstitial e <strong>rewarded ads</strong> (es. per concedere uno “Scudo” in-game). In base alla scelta nel prompt ATT di Apple, AdMob può trattare:</p>
+    <ul>
+      <li>Identificatori del dispositivo (es. <strong>IDFA</strong>)</li>
+      <li>Posizione approssimata e informazioni del dispositivo (per la rilevanza degli annunci)</li>
+      <li>Dati di interazione con gli annunci (visualizzazioni, clic, impression)</li>
+    </ul>
+    <p>Se <strong>rifiuti il tracciamento</strong>, gli annunci vengono mostrati ma <strong>non sono personalizzati</strong>. Approfondisci: <a href="https://policies.google.com/technologies/ads">Privacy &amp; Termini AdMob</a>.</p>
+
+    <h3>1.2 Game Center &amp; Classifiche (Apple)</h3>
+    <p>Il gioco può mostrare una <strong>classifica globale</strong> tramite <strong>Apple Game Center</strong>. Prima di condividere qualsiasi punteggio, l’app chiede il tuo <strong>consenso esplicito</strong>. Puoi cambiare questa preferenza nelle <em>Impostazioni</em> del gioco.</p>
+    <ul>
+      <li><strong>Se acconsenti:</strong> il tuo punteggio e un identificatore/alias Game Center (gestito da Apple) possono essere inviati ai server di Apple.</li>
+      <li><strong>Se non acconsenti o lo disattivi dopo:</strong> i punteggi restano sul dispositivo e <em>non</em> vengono caricati.</li>
+    </ul>
+    <p>Scopri di più: <a href="https://www.apple.com/legal/privacy/">Privacy Apple</a>.</p>
+
+    <h3>1.3 Prompt di Recensione In-App (Apple)</h3>
+    <p>Il gioco può chiedere occasionalmente di <strong>valutare/recensire</strong> l’app tramite <em>SKStoreReviewController</em>. La visualizzazione del prompt è gestita da Apple; non raccogliamo dati personali tramite questa funzione.</p>
+
+    <h2>2. Scelte &amp; Controlli</h2>
+    <ul>
+      <li><strong>Annunci / Tracking (ATT):</strong> Al primo avvio chiediamo il consenso al tracciamento pubblicitario. Se rifiuti, gli annunci non sono personalizzati. Modificabile in <em>Impostazioni iOS → Privacy e sicurezza → Tracciamento</em>.</li>
+      <li><strong>Consenso Classifiche:</strong> Mostriamo un dialog di consenso la prima volta. Puoi attivarlo/disattivarlo in <em>Impostazioni → “Classifica globale (condividi punteggio)”</em>.</li>
+      <li><strong>Account Game Center:</strong> Gestibile in <em>Impostazioni iOS → Game Center</em>.</li>
+      <li><strong>Audio &amp; Vibrazione:</strong> Gestibili nelle <em>Impostazioni</em> in-game.</li>
+    </ul>
+
+    <h2>3. Rewarded Ads &amp; Oggetti di Gioco</h2>
+    <p>La visione di un annuncio ricompensato (via AdMob) può concedere un oggetto (es. uno “Scudo” che salva una volta). Le informazioni sulla visione possono essere trattate da AdMob per erogare la ricompensa. Se un annuncio non è disponibile, nessuna ricompensa viene concessa.</p>
+
+    <h2>4. Conservazione dei Dati</h2>
+    <p><em>Beat The Tower</em> non gestisce server propri per account giocatore. I dati trattati da <strong>Google</strong> (AdMob) e <strong>Apple</strong> (Game Center, prompt recensione) seguono le loro policy.</p>
+
+    <h2>5. Privacy dei Minori</h2>
+    <p>Il gioco non è specificamente destinato ai bambini. Genitori/tutori possono rivedere le impostazioni dei servizi terzi e contattarci per domande.</p>
+
+    <h2>6. Sicurezza</h2>
+    <p>I dati locali (punteggi, impostazioni) sono salvati con meccanismi iOS come <em>UserDefaults</em>. I servizi terzi applicano proprie misure di sicurezza.</p>
+
+    <h2>7. Modifiche</h2>
+    <p>Questa informativa può essere aggiornata. Le modifiche sostanziali saranno indicate aggiornando la data “Ultimo aggiornamento”.</p>
+
+    <h2>8. Contatti</h2>
+    <p>Domande o richieste? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+  </section>
+
+  <!-- 🇯🇵 日本語 -->
+  <section class="lang" id="lang-ja" lang="ja">
+    <p><em>Beat The Tower</em> はユーザーのプライバシーを尊重します。本ポリシーでは、ゲームのプレイ時にどのような情報が処理され、どのように利用される可能性があるかを説明します。</p>
+
+    <h2>1. 収集内容</h2>
+    <p>本アプリは、当社サーバーへ個人情報を直接収集・保存・送信<strong>しません</strong>。最高スコア、設定（音量・触覚など）、同意設定（リーダーボード共有の可否）などのゲームデータは、<em>UserDefaults</em> を用いて端末内に保存されます。</p>
+    <p>ただし、以下の<strong>第三者サービス</strong>が機能提供のためにデータを処理する場合があります。</p>
+
+    <h3>1.1 広告（Google AdMob）</h3>
+    <p><strong>Google AdMob</strong> を使用して、バナー、インタースティシャル、<strong>リワード広告</strong>（例：ゲーム内「シールド」を付与）を表示します。Apple の ATT（App Tracking Transparency）の選択に応じて、AdMob は以下を処理する場合があります。</p>
+    <ul>
+      <li>デバイス識別子（例：<strong>IDFA</strong>）</li>
+      <li>おおよその位置情報・デバイス情報（広告の関連性向上のため）</li>
+      <li>広告の閲覧・クリック等のインタラクションデータ</li>
+    </ul>
+    <p><strong>追跡を拒否</strong>した場合、広告は表示されますが<strong>パーソナライズされません</strong>。詳細：<a href="https://policies.google.com/technologies/ads">Google AdMob プライバシー</a></p>
+
+    <h3>1.2 Game Center とリーダーボード（Apple）</h3>
+    <p><strong>Apple Game Center</strong> による<strong>グローバルランキング</strong>を表示できます。スコア共有の前に、アプリ内ダイアログで<strong>明示的な同意</strong>を取得します。この設定はゲーム内の <em>設定</em> から変更できます。</p>
+    <ul>
+      <li><strong>同意した場合：</strong>スコアと Game Center の識別子／エイリアス（Apple が管理）が Apple のサーバーに送信される場合があります。</li>
+      <li><strong>同意しない／後でオフにした場合：</strong>スコアは端末内に留まり、<em>共有されません</em>。</li>
+    </ul>
+    <p>詳細：<a href="https://www.apple.com/legal/privacy/">Apple プライバシー</a></p>
+
+    <h3>1.3 アプリ内レビュー促進（Apple）</h3>
+    <p>Apple の <em>SKStoreReviewController</em> を使用して、アプリの<strong>評価・レビュー</strong>をお願いすることがあります。表示の可否は Apple が制御し、当社が個人情報を収集することはありません。</p>
+
+    <h2>2. 選択とコントロール</h2>
+    <ul>
+      <li><strong>広告 / 追跡（ATT）：</strong> 初回起動時に追跡許可を求めます。拒否した場合、広告は非パーソナライズ表示。<em>iOS 設定 → プライバシーとセキュリティ → トラッキング</em> で変更可能です。</li>
+      <li><strong>リーダーボード同意：</strong> 初回に同意ダイアログを表示。<em>設定 → 「グローバルリーダーボード（スコア共有）」</em> でいつでも切替可能。</li>
+      <li><strong>Game Center アカウント：</strong> <em>iOS 設定 → Game Center</em> から管理可能。</li>
+      <li><strong>オーディオ / 触覚：</strong> ゲーム内 <em>設定</em> で管理。</li>
+    </ul>
+
+    <h2>3. リワード広告とゲーム内アイテム</h2>
+    <p>リワード広告（AdMob）を視聴すると、アイテム（例：「シールド」一回自動セーブ）が付与される場合があります。視聴情報は報酬付与のために AdMob により処理される場合があります。広告が利用できない場合、報酬は付与されません。</p>
+
+    <h2>4. データ保持</h2>
+    <p><em>Beat The Tower</em> はプレイヤーアカウント用の自社サーバーを運用していません。<strong>Google</strong>（AdMob）と <strong>Apple</strong>（Game Center、レビュー促進）によるデータ処理は、それぞれのポリシーに従います。</p>
+
+    <h2>5. 児童のプライバシー</h2>
+    <p>本ゲームはカジュアル向けですが、特定の年少者を対象としていません。保護者の方は第三者サービスの設定をご確認のうえ、ご不明点はお問い合わせください。</p>
+
+    <h2>6. セキュリティ</h2>
+    <p>ローカルデータ（スコア、設定）は <em>UserDefaults</em> などの iOS 機能で保存されます。Apple/Google など第三者は独自のセキュリティ対策を適用します。</p>
+
+    <h2>7. 変更</h2>
+    <p>本ポリシーは更新される場合があります。重要な変更は上部の「最終更新日」の更新で通知します。</p>
+
+    <h2>8. お問い合わせ</h2>
+    <p>ご質問：<a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+  </section>
+
+  <!-- 🇰🇷 한국어 -->
+  <section class="lang" id="lang-ko" lang="ko">
+    <p><em>Beat The Tower</em>는 사용자의 개인정보를 존중합니다. 본 정책은 게임 이용 시 어떤 정보가 처리될 수 있으며 어떻게 사용되는지 설명합니다.</p>
+
+    <h2>1. 수집 내용</h2>
+    <p>앱은 당사 서버로 개인 정보를 직접 수집·저장·전송하지 <strong>않습니다</strong>. 최고 점수, 설정(오디오 볼륨, 햅틱), 동의(리더보드 공유 여부) 등 게임 데이터는 <em>UserDefaults</em>를 통해 기기에 로컬 저장됩니다.</p>
+    <p>다만 아래의 <strong>제3자 서비스</strong>가 기능 제공을 위해 데이터를 처리할 수 있습니다.</p>
+
+    <h3>1.1 광고(Google AdMob)</h3>
+    <p><strong>Google AdMob</strong>은 배너, 전면 광고, <strong>리워드 광고</strong>(예: “실드” 지급)를 제공합니다. Apple의 ATT(앱 추적 투명성) 선택에 따라 다음이 처리될 수 있습니다.</p>
+    <ul>
+      <li>기기 식별자(예: <strong>IDFA</strong>)</li>
+      <li>대략적인 위치 및 기기 정보(광고 관련성 향상)</li>
+      <li>광고 상호작용 데이터(조회, 클릭, 노출)</li>
+    </ul>
+    <p><strong>추적을 거부</strong>해도 광고는 표시되지만 <strong>개인화되지 않습니다</strong>. 자세히 보기: <a href="https://policies.google.com/technologies/ads">Google AdMob 개인정보처리방침</a></p>
+
+    <h3>1.2 Game Center &amp; 리더보드(Apple)</h3>
+    <p><strong>Apple Game Center</strong>를 통해 <strong>글로벌 리더보드</strong>를 보여줄 수 있습니다. 점수 공유 전에 앱 내 대화상자로 <strong>명시적 동의</strong>를 요청하며, 이후 게임 내 <em>설정</em>에서 변경할 수 있습니다.</p>
+    <ul>
+      <li><strong>동의 시:</strong> 점수와 Apple이 관리하는 Game Center 플레이어 식별자/별칭이 Apple 서버로 전송될 수 있습니다.</li>
+      <li><strong>동의하지 않거나 나중에 끄면:</strong> 점수는 기기에만 남고 <em>업로드되지 않습니다</em>.</li>
+    </ul>
+    <p>자세히: <a href="https://www.apple.com/legal/privacy/">Apple 개인정보 보호</a></p>
+
+    <h3>1.3 인앱 리뷰 요청(Apple)</h3>
+    <p>Apple의 <em>SKStoreReviewController</em>로 가끔 <strong>평가/리뷰</strong>를 요청할 수 있습니다. 표시 여부는 Apple이 제어하며, 당사는 이 기능을 통해 개인정보를 수집하지 않습니다.</p>
+
+    <h2>2. 선택 및 제어</h2>
+    <ul>
+      <li><strong>광고/추적(ATT):</strong> 최초 실행 시 추적 허용을 요청합니다. 거부 시 광고는 개인화되지 않습니다. <em>iOS 설정 → 개인정보 보호 및 보안 → 추적</em>에서 변경 가능.</li>
+      <li><strong>리더보드 동의:</strong> 최초 1회 동의 팝업을 표시하며, <em>설정 → “글로벌 리더보드(점수 공유)”</em>에서 언제든 토글 가능.</li>
+      <li><strong>Game Center 계정:</strong> <em>iOS 설정 → Game Center</em>에서 관리.</li>
+      <li><strong>오디오/햅틱:</strong> 게임 내 <em>설정</em>에서 관리.</li>
+    </ul>
+
+    <h2>3. 리워드 광고 &amp; 인게임 아이템</h2>
+    <p>리워드 광고(AdMob)를 시청하면 아이템(예: 1회 자동 구제 “실드”)이 지급될 수 있습니다. 시청 정보는 보상 처리를 위해 AdMob이 처리할 수 있으며, 광고가 없으면 보상도 없습니다.</p>
+
+    <h2>4. 데이터 보관</h2>
+    <p><em>Beat The Tower</em>는 자체 플레이어 계정 서버를 운영하지 않습니다. <strong>Google</strong>(AdMob)과 <strong>Apple</strong>(Game Center, 리뷰 프롬프트)의 정책을 따릅니다.</p>
+
+    <h2>5. 아동 개인정보</h2>
+    <p>본 게임은 캐주얼 장르지만 특정 아동을 대상으로 하지 않습니다. 보호자는 제3자 서비스 설정을 확인하고 문의 사항이 있으면 연락해 주세요.</p>
+
+    <h2>6. 보안</h2>
+    <p>로컬 데이터(점수, 설정)는 <em>UserDefaults</em> 등 iOS 메커니즘으로 저장됩니다. 제3자 서비스는 자체 보안 조치를 적용합니다.</p>
+
+    <h2>7. 정책 변경</h2>
+    <p>본 정책은 수시로 업데이트될 수 있으며, 주요 변경 사항은 상단 “Last updated” 날짜에 반영됩니다.</p>
+
+    <h2>8. 연락처</h2>
+    <p>문의: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+  </section>
+
+  <!-- 🇪🇸 Español -->
+  <section class="lang" id="lang-es" lang="es">
+    <p><em>Beat The Tower</em> respeta tu privacidad. Esta política explica qué información puede procesarse y cómo se utiliza cuando juegas.</p>
+
+    <h2>1. Qué Recopilamos</h2>
+    <p>La app <strong>no</strong> recopila, almacena ni transmite directamente datos personales a nuestros propios servidores. Los datos del juego (mejor puntuación, ajustes de audio/háptica y el consentimiento de clasificación) se guardan localmente en tu dispositivo mediante <em>UserDefaults</em>.</p>
+    <p>No obstante, la app integra los siguientes <strong>servicios de terceros</strong>, que pueden procesar datos para ofrecer sus funciones:</p>
+
+    <h3>1.1 Publicidad (Google AdMob)</h3>
+    <p>Usamos <strong>Google AdMob</strong> para banners, intersticiales y <strong>anuncios recompensados</strong> (p. ej., para conceder un “Escudo”). Según tu elección en el aviso ATT de Apple, AdMob puede procesar:</p>
+    <ul>
+      <li>Identificadores del dispositivo (p. ej., <strong>IDFA</strong>)</li>
+      <li>Ubicación aproximada e información del dispositivo (para mejorar la relevancia de los anuncios)</li>
+      <li>Datos de interacción con los anuncios (vistas, clics, impresiones)</li>
+    </ul>
+    <p>Si <strong>rechazas el seguimiento</strong>, se mostrarán anuncios pero <strong>no serán personalizados</strong>. Más info: <a href="https://policies.google.com/technologies/ads">Privacidad y Términos de AdMob</a>.</p>
+
+    <h3>1.2 Game Center y Clasificaciones (Apple)</h3>
+    <p>El juego puede mostrar una <strong>clasificación global</strong> mediante <strong>Apple Game Center</strong>. Antes de compartir cualquier puntuación, la app muestra un diálogo para obtener tu <strong>consentimiento explícito</strong>. Puedes cambiar esta preferencia más tarde en los <em>Ajustes</em> del juego.</p>
+    <ul>
+      <li><strong>Si aceptas:</strong> tu puntuación y un identificador/alias de Game Center (gestionado por Apple) pueden enviarse a los servidores de Apple.</li>
+      <li><strong>Si no aceptas o lo desactivas después:</strong> tus puntuaciones permanecen en el dispositivo y <em>no</em> se suben.</li>
+    </ul>
+    <p>Más info: <a href="https://www.apple.com/legal/privacy/">Privacidad de Apple</a>.</p>
+
+    <h3>1.3 Solicitudes de Reseña In-App (Apple)</h3>
+    <p>Ocasionalmente, el juego puede pedirte que <strong>valores o reseñes</strong> la app con <em>SKStoreReviewController</em>. Apple decide si mostrar el aviso; nosotros no recopilamos datos personales mediante esta función.</p>
+
+    <h2>2. Tus Opciones y Controles</h2>
+    <ul>
+      <li><strong>Anuncios / Seguimiento (ATT):</strong> En el primer inicio pedimos permiso para el seguimiento de anuncios. Si lo rechazas, los anuncios no se personalizan. Puedes cambiarlo en <em>Ajustes de iOS → Privacidad y seguridad → Seguimiento</em>.</li>
+      <li><strong>Consentimiento de Clasificación:</strong> Mostramos un diálogo de consentimiento la primera vez. Puedes alternarlo en <em>Ajustes → “Clasificación global (compartir puntuación)”</em>.</li>
+      <li><strong>Cuenta de Game Center:</strong> Gestiona en <em>Ajustes de iOS → Game Center</em>.</li>
+      <li><strong>Audio y Háptica:</strong> Gestiona dentro de los <em>Ajustes</em> del juego.</li>
+    </ul>
+
+    <h2>3. Anuncios Recompensados e Ítems</h2>
+    <p>Ver un anuncio recompensado (AdMob) puede conceder un ítem (p. ej., un “Escudo” que te salva una vez). AdMob puede procesar la visualización para otorgar la recompensa. Si no hay anuncio, no hay recompensa.</p>
+
+    <h2>4. Conservación de Datos</h2>
+    <p><em>Beat The Tower</em> no opera servidores propios para cuentas. Los datos procesados por <strong>Google</strong> (AdMob) y <strong>Apple</strong> (Game Center, reseñas) siguen sus políticas.</p>
+
+    <h2>5. Privacidad Infantil</h2>
+    <p>El juego no está dirigido específicamente a menores. Los tutores pueden revisar los ajustes de terceros y contactarnos si tienen dudas.</p>
+
+    <h2>6. Seguridad</h2>
+    <p>Los datos locales (puntuaciones, ajustes) se guardan con mecanismos de iOS como <em>UserDefaults</em>. Los servicios de terceros aplican sus propias medidas de seguridad.</p>
+
+    <h2>7. Cambios en esta Política</h2>
+    <p>Podemos actualizar esta política ocasionalmente. Los cambios sustanciales se reflejarán actualizando la fecha de “Última actualización”.</p>
+
+    <h2>8. Contacto</h2>
+    <p>¿Preguntas o solicitudes? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+  </section>
+
+  <hr />
   <p style="font-size:14px;color:#888;">© 2025 Gabriele Monte. All rights reserved.</p>
+  <p style="font-size:12px;color:#888;"> <span class="mono">Note:</span> This is a multilingual static page. No tracking is performed here.</p>
+
+  <script>
+    const switchers = document.querySelectorAll('.lang-btn');
+    const langs = document.querySelectorAll('.lang');
+    function activate(lang){
+      switchers.forEach(b=>{
+        const on = b.dataset.lang === lang;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      langs.forEach(s=>s.classList.toggle('active', s.id === 'lang-'+lang));
+      document.documentElement.lang = lang;
+    }
+    switchers.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.lang)));
+    // Optional: auto-detect browser language on first load
+    const preferred = (navigator.language || 'en').slice(0,2);
+    if(['en','it','ja','ko','es'].includes(preferred)) activate(preferred);
+  </script>
 </body>
 </html>
