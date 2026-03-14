@@ -2,158 +2,770 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Privacy Policy – Sonder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beat The Tower - Privacy Policy</title>
   <style>
-    body{font-family:-apple-system,Arial,sans-serif;max-width:900px;margin:40px auto;line-height:1.6;color:#eee;background:#111;padding:20px;border-radius:12px}
-    h1,h2,h3{color:#A0714F;margin-top:24px}
-    .lang-switch{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 24px}
-    .lang-btn{border:1px solid #A0714F;background:transparent;color:#A0714F;padding:6px 10px;border-radius:8px;cursor:pointer}
-    .lang-btn.active{background:#A0714F;color:#111;font-weight:700}
-    .lang{display:none}
-    .lang.active{display:block}
-    a{color:#A0714F}
-    hr{border:none;border-top:1px solid #333;margin:30px 0}
-    small.mono{font-family:ui-monospace,Menlo,Consolas,monospace;color:#bbb}
-    p{color:rgba(255,255,255,0.7)}
-    li{color:rgba(255,255,255,0.7)}
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-border: rgba(255, 255, 255, 0.14);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-2: #818cf8;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(129, 140, 248, 0.18), transparent 25%),
+        linear-gradient(180deg, #0f172a 0%, #111827 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #bae6fd;
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .toolbar label {
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    select {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 0.98rem;
+      min-width: 220px;
+      outline: none;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .content {
+      padding: 28px 22px 32px;
+    }
+
+    .lang-content {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .lang-content.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: #e0f2fe;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #f8fafc;
+    }
+
+    ul {
+      margin: 0 0 14px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    a {
+      color: #7dd3fc;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      select {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .content {
+        padding: 22px 18px 28px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy – Sonder</h1>
-  <p><strong>Last updated:</strong> March 2026</p>
+  <div class="container">
+    <div class="hero">
+      <div class="badge">Beat The Tower</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">
+        This page explains how Beat The Tower handles data through third-party services used for advertising and analytics.
+      </p>
+    </div>
 
-  <div class="lang-switch" role="tablist">
-    <button class="lang-btn active" data-lang="en" role="tab">🇬🇧 English</button>
-    <button class="lang-btn" data-lang="it" role="tab">🇮🇹 Italiano</button>
-    <button class="lang-btn" data-lang="es" role="tab">🇪🇸 Español</button>
-    <button class="lang-btn" data-lang="fr" role="tab">🇫🇷 Français</button>
-    <button class="lang-btn" data-lang="de" role="tab">🇩🇪 Deutsch</button>
+    <div class="panel">
+      <div class="toolbar">
+        <div>
+          <label for="languageSelect">Select language:</label><br />
+          <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="es">Español</option>
+            <option value="zh">中文</option>
+            <option value="ko">한국어</option>
+          </select>
+        </div>
+        <div class="updated">Last updated: March 14, 2026</div>
+      </div>
+
+      <div class="content">
+        <!-- ENGLISH -->
+        <div class="lang-content active" data-lang="en">
+          <h2>1. Introduction</h2>
+          <p>
+            Beat The Tower does not directly collect personal data such as your name, email address, or home address.
+            However, the app uses third-party services provided by Google for advertising and analytics.
+          </p>
+
+          <h2>2. Third-Party Services</h2>
+          <p>The app may use the following Google services:</p>
+          <ul>
+            <li>Google AdMob, to display advertisements</li>
+            <li>Firebase Analytics, to analyze app usage and improve the game experience</li>
+          </ul>
+
+          <h2>3. Data Collected by Third Parties</h2>
+          <p>
+            These services may automatically collect certain information, such as:
+          </p>
+          <ul>
+            <li>Device information</li>
+            <li>Advertising identifiers</li>
+            <li>App interaction data</li>
+            <li>Crash and performance data</li>
+            <li>Approximate usage information</li>
+          </ul>
+          <p>
+            This information is collected and processed directly by Google according to its own privacy policies.
+          </p>
+
+          <h2>4. How the Data Is Used</h2>
+          <p>The data collected by Google services may be used to:</p>
+          <ul>
+            <li>Show advertisements</li>
+            <li>Measure ad performance</li>
+            <li>Understand how users interact with the game</li>
+            <li>Improve app stability and performance</li>
+          </ul>
+
+          <h2>5. No Direct Collection by the Developer</h2>
+          <p>
+            The developer of Beat The Tower does not directly collect, store, or process personal data from users.
+            Any data processing related to advertising or analytics is handled by Google through its integrated services.
+          </p>
+
+          <h2>6. Children's Privacy</h2>
+          <p>
+            Beat The Tower is not intended to knowingly collect personal information from children.
+            If required by applicable laws or platform rules, Google services may apply age-related protections or limitations.
+          </p>
+
+          <h2>7. Your Choices</h2>
+          <p>
+            You may be able to manage your advertising preferences and data settings through your device settings or your Google account settings.
+          </p>
+
+          <h2>8. Google Privacy Information</h2>
+          <p>
+            For more information about how Google collects and processes data, please refer to Google's privacy policy:
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. Changes to This Privacy Policy</h2>
+          <p>
+            This Privacy Policy may be updated from time to time. Any updates will be published on this page.
+          </p>
+
+          <h2>10. Contact</h2>
+          <p>
+            If you have any questions about this Privacy Policy, you may contact the developer through the official app store page of Beat The Tower.
+          </p>
+        </div>
+
+        <!-- FRENCH -->
+        <div class="lang-content" data-lang="fr">
+          <h2>1. Introduction</h2>
+          <p>
+            Beat The Tower ne collecte pas directement de données personnelles telles que votre nom, votre adresse e-mail ou votre adresse postale.
+            Cependant, l'application utilise des services tiers fournis par Google pour la publicité et l'analyse.
+          </p>
+
+          <h2>2. Services tiers</h2>
+          <p>L'application peut utiliser les services Google suivants :</p>
+          <ul>
+            <li>Google AdMob, pour afficher des publicités</li>
+            <li>Firebase Analytics, pour analyser l'utilisation de l'application et améliorer l'expérience de jeu</li>
+          </ul>
+
+          <h2>3. Données collectées par des tiers</h2>
+          <p>Ces services peuvent collecter automatiquement certaines informations, telles que :</p>
+          <ul>
+            <li>Informations sur l'appareil</li>
+            <li>Identifiants publicitaires</li>
+            <li>Données d'interaction avec l'application</li>
+            <li>Données de crash et de performance</li>
+            <li>Informations d'utilisation approximatives</li>
+          </ul>
+          <p>
+            Ces informations sont collectées et traitées directement par Google conformément à ses propres politiques de confidentialité.
+          </p>
+
+          <h2>4. Utilisation des données</h2>
+          <p>Les données collectées par les services Google peuvent être utilisées pour :</p>
+          <ul>
+            <li>Afficher des publicités</li>
+            <li>Mesurer la performance des publicités</li>
+            <li>Comprendre comment les utilisateurs interagissent avec le jeu</li>
+            <li>Améliorer la stabilité et les performances de l'application</li>
+          </ul>
+
+          <h2>5. Aucune collecte directe par le développeur</h2>
+          <p>
+            Le développeur de Beat The Tower ne collecte, ne stocke ni ne traite directement les données personnelles des utilisateurs.
+            Tout traitement de données lié à la publicité ou à l'analyse est géré par Google via ses services intégrés.
+          </p>
+
+          <h2>6. Confidentialité des enfants</h2>
+          <p>
+            Beat The Tower n'est pas destiné à collecter sciemment des informations personnelles auprès d'enfants.
+            Si les lois applicables ou les règles de la plateforme l'exigent, les services Google peuvent appliquer des protections ou limitations liées à l'âge.
+          </p>
+
+          <h2>7. Vos choix</h2>
+          <p>
+            Vous pouvez peut-être gérer vos préférences publicitaires et vos paramètres de données via les paramètres de votre appareil ou de votre compte Google.
+          </p>
+
+          <h2>8. Informations de confidentialité de Google</h2>
+          <p>
+            Pour plus d'informations sur la manière dont Google collecte et traite les données, veuillez consulter la politique de confidentialité de Google :
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. Modifications de cette politique de confidentialité</h2>
+          <p>
+            Cette politique de confidentialité peut être mise à jour de temps à autre. Toute mise à jour sera publiée sur cette page.
+          </p>
+
+          <h2>10. Contact</h2>
+          <p>
+            Si vous avez des questions concernant cette politique de confidentialité, vous pouvez contacter le développeur via la page officielle de l'application Beat The Tower sur le store.
+          </p>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="lang-content" data-lang="de">
+          <h2>1. Einleitung</h2>
+          <p>
+            Beat The Tower erhebt keine personenbezogenen Daten wie Ihren Namen, Ihre E-Mail-Adresse oder Ihre Wohnadresse direkt.
+            Die App verwendet jedoch Drittanbieterdienste von Google für Werbung und Analysen.
+          </p>
+
+          <h2>2. Drittanbieterdienste</h2>
+          <p>Die App kann folgende Google-Dienste verwenden:</p>
+          <ul>
+            <li>Google AdMob zur Anzeige von Werbung</li>
+            <li>Firebase Analytics zur Analyse der App-Nutzung und zur Verbesserung des Spielerlebnisses</li>
+          </ul>
+
+          <h2>3. Von Dritten erhobene Daten</h2>
+          <p>Diese Dienste können automatisch bestimmte Informationen erfassen, zum Beispiel:</p>
+          <ul>
+            <li>Geräteinformationen</li>
+            <li>Werbe-IDs</li>
+            <li>Interaktionsdaten der App</li>
+            <li>Absturz- und Leistungsdaten</li>
+            <li>Ungefähre Nutzungsinformationen</li>
+          </ul>
+          <p>
+            Diese Informationen werden direkt von Google gemäß den eigenen Datenschutzrichtlinien erhoben und verarbeitet.
+          </p>
+
+          <h2>4. Verwendung der Daten</h2>
+          <p>Die von Google-Diensten erhobenen Daten können verwendet werden, um:</p>
+          <ul>
+            <li>Werbung anzuzeigen</li>
+            <li>Die Leistung von Werbung zu messen</li>
+            <li>Zu verstehen, wie Nutzer mit dem Spiel interagieren</li>
+            <li>Stabilität und Leistung der App zu verbessern</li>
+          </ul>
+
+          <h2>5. Keine direkte Datenerhebung durch den Entwickler</h2>
+          <p>
+            Der Entwickler von Beat The Tower erhebt, speichert oder verarbeitet keine personenbezogenen Daten der Nutzer direkt.
+            Jegliche Datenverarbeitung im Zusammenhang mit Werbung oder Analysen erfolgt durch Google über die integrierten Dienste.
+          </p>
+
+          <h2>6. Datenschutz für Kinder</h2>
+          <p>
+            Beat The Tower ist nicht dafür bestimmt, wissentlich personenbezogene Daten von Kindern zu sammeln.
+            Falls gesetzlich oder durch Plattformregeln erforderlich, können Google-Dienste altersbezogene Schutzmaßnahmen oder Einschränkungen anwenden.
+          </p>
+
+          <h2>7. Ihre Wahlmöglichkeiten</h2>
+          <p>
+            Möglicherweise können Sie Ihre Werbeeinstellungen und Datenschutzeinstellungen über die Geräteeinstellungen oder Ihr Google-Konto verwalten.
+          </p>
+
+          <h2>8. Datenschutzinformationen von Google</h2>
+          <p>
+            Weitere Informationen darüber, wie Google Daten erhebt und verarbeitet, finden Sie in der Google-Datenschutzerklärung:
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. Änderungen dieser Datenschutzrichtlinie</h2>
+          <p>
+            Diese Datenschutzrichtlinie kann von Zeit zu Zeit aktualisiert werden. Änderungen werden auf dieser Seite veröffentlicht.
+          </p>
+
+          <h2>10. Kontakt</h2>
+          <p>
+            Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, können Sie den Entwickler über die offizielle Store-Seite von Beat The Tower kontaktieren.
+          </p>
+        </div>
+
+        <!-- ITALIAN -->
+        <div class="lang-content" data-lang="it">
+          <h2>1. Introduzione</h2>
+          <p>
+            Beat The Tower non raccoglie direttamente dati personali come nome, indirizzo email o indirizzo di casa.
+            Tuttavia, l'app utilizza servizi di terze parti forniti da Google per la pubblicità e per le analisi statistiche.
+          </p>
+
+          <h2>2. Servizi di terze parti</h2>
+          <p>L'app può utilizzare i seguenti servizi Google:</p>
+          <ul>
+            <li>Google AdMob, per mostrare annunci pubblicitari</li>
+            <li>Firebase Analytics, per analizzare l'utilizzo dell'app e migliorare l'esperienza di gioco</li>
+          </ul>
+
+          <h2>3. Dati raccolti da terze parti</h2>
+          <p>Questi servizi possono raccogliere automaticamente alcune informazioni, come:</p>
+          <ul>
+            <li>Informazioni sul dispositivo</li>
+            <li>Identificatori pubblicitari</li>
+            <li>Dati di interazione con l'app</li>
+            <li>Dati relativi a crash e prestazioni</li>
+            <li>Informazioni approssimative sull'utilizzo</li>
+          </ul>
+          <p>
+            Queste informazioni vengono raccolte e trattate direttamente da Google secondo le proprie informative sulla privacy.
+          </p>
+
+          <h2>4. Come vengono utilizzati i dati</h2>
+          <p>I dati raccolti dai servizi Google possono essere usati per:</p>
+          <ul>
+            <li>Mostrare annunci pubblicitari</li>
+            <li>Misurare il rendimento della pubblicità</li>
+            <li>Comprendere come gli utenti interagiscono con il gioco</li>
+            <li>Migliorare la stabilità e le prestazioni dell'app</li>
+          </ul>
+
+          <h2>5. Nessuna raccolta diretta da parte dello sviluppatore</h2>
+          <p>
+            Lo sviluppatore di Beat The Tower non raccoglie, memorizza o tratta direttamente dati personali degli utenti.
+            Qualsiasi trattamento dei dati relativo a pubblicità o analytics viene gestito da Google tramite i suoi servizi integrati.
+          </p>
+
+          <h2>6. Privacy dei minori</h2>
+          <p>
+            Beat The Tower non è progettato per raccogliere consapevolmente informazioni personali da minori.
+            Se richiesto dalle leggi applicabili o dalle regole della piattaforma, i servizi Google possono applicare protezioni o limitazioni legate all'età.
+          </p>
+
+          <h2>7. Le tue scelte</h2>
+          <p>
+            Potresti poter gestire le preferenze pubblicitarie e le impostazioni relative ai dati tramite le impostazioni del tuo dispositivo o del tuo account Google.
+          </p>
+
+          <h2>8. Informazioni sulla privacy di Google</h2>
+          <p>
+            Per maggiori informazioni su come Google raccoglie e tratta i dati, consulta l'informativa sulla privacy di Google:
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. Modifiche a questa Privacy Policy</h2>
+          <p>
+            Questa Privacy Policy può essere aggiornata di tanto in tanto. Eventuali modifiche saranno pubblicate su questa pagina.
+          </p>
+
+          <h2>10. Contatti</h2>
+          <p>
+            Se hai domande su questa Privacy Policy, puoi contattare lo sviluppatore tramite la pagina ufficiale dell'app Beat The Tower sullo store.
+          </p>
+        </div>
+
+        <!-- SPANISH -->
+        <div class="lang-content" data-lang="es">
+          <h2>1. Introducción</h2>
+          <p>
+            Beat The Tower no recopila directamente datos personales como su nombre, dirección de correo electrónico o dirección postal.
+            Sin embargo, la aplicación utiliza servicios de terceros proporcionados por Google para publicidad y análisis.
+          </p>
+
+          <h2>2. Servicios de terceros</h2>
+          <p>La aplicación puede utilizar los siguientes servicios de Google:</p>
+          <ul>
+            <li>Google AdMob, para mostrar anuncios</li>
+            <li>Firebase Analytics, para analizar el uso de la aplicación y mejorar la experiencia del juego</li>
+          </ul>
+
+          <h2>3. Datos recopilados por terceros</h2>
+          <p>Estos servicios pueden recopilar automáticamente cierta información, como:</p>
+          <ul>
+            <li>Información del dispositivo</li>
+            <li>Identificadores publicitarios</li>
+            <li>Datos de interacción con la aplicación</li>
+            <li>Datos de fallos y rendimiento</li>
+            <li>Información aproximada de uso</li>
+          </ul>
+          <p>
+            Esta información es recopilada y procesada directamente por Google de acuerdo con sus propias políticas de privacidad.
+          </p>
+
+          <h2>4. Cómo se utilizan los datos</h2>
+          <p>Los datos recopilados por los servicios de Google pueden utilizarse para:</p>
+          <ul>
+            <li>Mostrar anuncios</li>
+            <li>Medir el rendimiento de los anuncios</li>
+            <li>Comprender cómo los usuarios interactúan con el juego</li>
+            <li>Mejorar la estabilidad y el rendimiento de la aplicación</li>
+          </ul>
+
+          <h2>5. Ninguna recopilación directa por parte del desarrollador</h2>
+          <p>
+            El desarrollador de Beat The Tower no recopila, almacena ni procesa directamente datos personales de los usuarios.
+            Cualquier tratamiento de datos relacionado con publicidad o análisis es gestionado por Google a través de sus servicios integrados.
+          </p>
+
+          <h2>6. Privacidad infantil</h2>
+          <p>
+            Beat The Tower no está destinado a recopilar conscientemente información personal de menores.
+            Si lo exigen las leyes aplicables o las normas de la plataforma, los servicios de Google pueden aplicar protecciones o limitaciones relacionadas con la edad.
+          </p>
+
+          <h2>7. Sus opciones</h2>
+          <p>
+            Puede que pueda gestionar sus preferencias publicitarias y configuraciones de datos a través de los ajustes de su dispositivo o de su cuenta de Google.
+          </p>
+
+          <h2>8. Información de privacidad de Google</h2>
+          <p>
+            Para obtener más información sobre cómo Google recopila y procesa datos, consulte la política de privacidad de Google:
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. Cambios en esta Política de Privacidad</h2>
+          <p>
+            Esta Política de Privacidad puede actualizarse ocasionalmente. Cualquier cambio se publicará en esta página.
+          </p>
+
+          <h2>10. Contacto</h2>
+          <p>
+            Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactar con el desarrollador a través de la página oficial de Beat The Tower en la tienda.
+          </p>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="lang-content" data-lang="zh">
+          <h2>1. 简介</h2>
+          <p>
+            Beat The Tower 不会直接收集您的个人数据，例如姓名、电子邮件地址或家庭住址。
+            但是，本应用使用 Google 提供的第三方服务用于广告和数据分析。
+          </p>
+
+          <h2>2. 第三方服务</h2>
+          <p>本应用可能会使用以下 Google 服务：</p>
+          <ul>
+            <li>Google AdMob，用于展示广告</li>
+            <li>Firebase Analytics，用于分析应用使用情况并改善游戏体验</li>
+          </ul>
+
+          <h2>3. 第三方收集的数据</h2>
+          <p>这些服务可能会自动收集某些信息，例如：</p>
+          <ul>
+            <li>设备信息</li>
+            <li>广告标识符</li>
+            <li>应用交互数据</li>
+            <li>崩溃和性能数据</li>
+            <li>大致使用信息</li>
+          </ul>
+          <p>
+            这些信息由 Google 根据其自身的隐私政策直接收集和处理。
+          </p>
+
+          <h2>4. 数据的用途</h2>
+          <p>Google 服务收集的数据可能用于：</p>
+          <ul>
+            <li>展示广告</li>
+            <li>衡量广告效果</li>
+            <li>了解用户如何与游戏互动</li>
+            <li>改善应用的稳定性和性能</li>
+          </ul>
+
+          <h2>5. 开发者不直接收集数据</h2>
+          <p>
+            Beat The Tower 的开发者不会直接收集、存储或处理用户的个人数据。
+            与广告或数据分析相关的任何数据处理均由 Google 通过其集成服务完成。
+          </p>
+
+          <h2>6. 儿童隐私</h2>
+          <p>
+            Beat The Tower 并非旨在有意收集儿童的个人信息。
+            如果适用法律或平台规则要求，Google 服务可能会实施与年龄相关的保护或限制。
+          </p>
+
+          <h2>7. 您的选择</h2>
+          <p>
+            您可以通过设备设置或 Google 账户设置管理您的广告偏好和数据设置。
+          </p>
+
+          <h2>8. Google 隐私信息</h2>
+          <p>
+            如需了解 Google 如何收集和处理数据的更多信息，请参阅 Google 的隐私政策：
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. 本隐私政策的变更</h2>
+          <p>
+            本隐私政策可能会不时更新。任何更新都会发布在此页面上。
+          </p>
+
+          <h2>10. 联系方式</h2>
+          <p>
+            如果您对本隐私政策有任何疑问，可以通过 Beat The Tower 在应用商店的官方页面联系开发者。
+          </p>
+        </div>
+
+        <!-- KOREAN -->
+        <div class="lang-content" data-lang="ko">
+          <h2>1. 소개</h2>
+          <p>
+            Beat The Tower는 이름, 이메일 주소, 집 주소와 같은 개인정보를 직접 수집하지 않습니다.
+            다만, 본 앱은 광고 및 분석을 위해 Google이 제공하는 제3자 서비스를 사용합니다.
+          </p>
+
+          <h2>2. 제3자 서비스</h2>
+          <p>본 앱은 다음과 같은 Google 서비스를 사용할 수 있습니다:</p>
+          <ul>
+            <li>광고 표시를 위한 Google AdMob</li>
+            <li>앱 사용 분석 및 게임 경험 개선을 위한 Firebase Analytics</li>
+          </ul>
+
+          <h2>3. 제3자가 수집하는 데이터</h2>
+          <p>이러한 서비스는 다음과 같은 정보를 자동으로 수집할 수 있습니다:</p>
+          <ul>
+            <li>기기 정보</li>
+            <li>광고 식별자</li>
+            <li>앱 상호작용 데이터</li>
+            <li>충돌 및 성능 데이터</li>
+            <li>대략적인 사용 정보</li>
+          </ul>
+          <p>
+            이 정보는 Google의 자체 개인정보처리방침에 따라 Google이 직접 수집하고 처리합니다.
+          </p>
+
+          <h2>4. 데이터 사용 목적</h2>
+          <p>Google 서비스가 수집한 데이터는 다음 목적으로 사용될 수 있습니다:</p>
+          <ul>
+            <li>광고 표시</li>
+            <li>광고 성과 측정</li>
+            <li>사용자가 게임과 어떻게 상호작용하는지 파악</li>
+            <li>앱의 안정성 및 성능 향상</li>
+          </ul>
+
+          <h2>5. 개발자의 직접 수집 없음</h2>
+          <p>
+            Beat The Tower의 개발자는 사용자의 개인정보를 직접 수집, 저장 또는 처리하지 않습니다.
+            광고 또는 분석과 관련된 모든 데이터 처리는 Google의 통합 서비스를 통해 이루어집니다.
+          </p>
+
+          <h2>6. 아동의 개인정보</h2>
+          <p>
+            Beat The Tower는 아동의 개인정보를 고의로 수집하기 위한 앱이 아닙니다.
+            관련 법률이나 플랫폼 규정상 필요한 경우, Google 서비스는 연령 관련 보호조치 또는 제한을 적용할 수 있습니다.
+          </p>
+
+          <h2>7. 사용자의 선택</h2>
+          <p>
+            사용자는 기기 설정 또는 Google 계정 설정을 통해 광고 환경설정 및 데이터 설정을 관리할 수 있습니다.
+          </p>
+
+          <h2>8. Google 개인정보 관련 정보</h2>
+          <p>
+            Google이 데이터를 수집하고 처리하는 방식에 대한 자세한 내용은 Google 개인정보처리방침을 참조하시기 바랍니다:
+          </p>
+          <p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>9. 개인정보처리방침 변경</h2>
+          <p>
+            본 개인정보처리방침은 수시로 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시됩니다.
+          </p>
+
+          <h2>10. 문의</h2>
+          <p>
+            본 개인정보처리방침에 관한 질문이 있으시면 Beat The Tower의 공식 스토어 페이지를 통해 개발자에게 문의하실 수 있습니다.
+          </p>
+        </div>
+
+        <div class="footer-note">
+          This page is designed as a simple multi-language privacy policy for GitHub Pages. Replace the app store contact reference with a direct contact method only if you actually want to publish one.
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- English -->
-  <section class="lang active" id="lang-en" lang="en">
-    <p><em>Sonder</em> respects your privacy. This policy explains what information may be processed when you use the app.</p>
-    <h2>1. Data Collection</h2>
-    <p>Sonder does <strong>not</strong> collect, store, or transmit personal data to any external server. All your voice memos, locations, moods, and tags stay on your device.</p>
-    <h2>2. Microphone</h2>
-    <p>Sonder uses the microphone solely to record voice memos at your explicit request. Audio files are stored locally and never uploaded to external servers.</p>
-    <h2>3. Location</h2>
-    <p>Sonder uses GPS to anchor your voice memos to a specific place. Location data is stored locally and never transmitted outside the app.</p>
-    <h2>4. Speech Recognition</h2>
-    <p>Sonder transcribes your voice on-device using Apple's Speech Recognition framework to detect your mood and suggest tags. Transcriptions are stored locally and never sent to external servers.</p>
-    <h2>5. iCloud</h2>
-    <p>If you have iCloud enabled, Sonder may use your private iCloud storage to back up your data. This data is accessible only to you and is governed by Apple's privacy policy.</p>
-    <h2>6. Data Deletion</h2>
-    <p>You can delete any Echo at any time from within the app. Uninstalling the app removes all locally stored data from your device.</p>
-    <h2>7. No Analytics, No Ads</h2>
-    <p>Sonder contains no advertising SDKs, no analytics tools, and no third-party tracking of any kind.</p>
-    <h2>8. Contact</h2>
-    <p>Questions? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
-  </section>
-
-  <!-- Italiano -->
-  <section class="lang" id="lang-it" lang="it">
-    <p><em>Sonder</em> rispetta la tua privacy. Questa informativa spiega quali informazioni vengono trattate quando usi l'app.</p>
-    <h2>1. Raccolta Dati</h2>
-    <p>Sonder <strong>non</strong> raccoglie, conserva o trasmette dati personali a server esterni. Tutti i tuoi vocali, posizioni, mood e tag restano sul tuo dispositivo.</p>
-    <h2>2. Microfono</h2>
-    <p>Sonder usa il microfono esclusivamente per registrare vocali su tua richiesta. I file audio sono salvati in locale e non vengono mai inviati a server esterni.</p>
-    <h2>3. Posizione</h2>
-    <p>Sonder usa il GPS per ancorare i vocali a un posto specifico. I dati di posizione sono salvati in locale e non vengono mai trasmessi fuori dall'app.</p>
-    <h2>4. Riconoscimento Vocale</h2>
-    <p>Sonder trascrive la tua voce sul dispositivo usando il framework di riconoscimento vocale di Apple per rilevare il mood e suggerire tag. Le trascrizioni sono salvate in locale e non vengono mai inviate a server esterni.</p>
-    <h2>5. iCloud</h2>
-    <p>Se hai iCloud attivo, Sonder può usare il tuo spazio iCloud privato per il backup. I dati sono accessibili solo a te e sono regolati dalla privacy policy di Apple.</p>
-    <h2>6. Eliminazione Dati</h2>
-    <p>Puoi eliminare qualsiasi Echo in qualsiasi momento dall'app. Disinstallare l'app rimuove tutti i dati salvati localmente.</p>
-    <h2>7. Niente Analitiche, Niente Pubblicità</h2>
-    <p>Sonder non contiene SDK pubblicitari, strumenti di analisi o tracciamento di terze parti di alcun tipo.</p>
-    <h2>8. Contatti</h2>
-    <p>Domande? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
-  </section>
-
-  <!-- Español -->
-  <section class="lang" id="lang-es" lang="es">
-    <p><em>Sonder</em> respeta tu privacidad. Esta política explica qué información puede procesarse cuando usas la app.</p>
-    <h2>1. Recopilación de Datos</h2>
-    <p>Sonder <strong>no</strong> recopila, almacena ni transmite datos personales a servidores externos. Todos tus notas de voz, ubicaciones, estados de ánimo y etiquetas permanecen en tu dispositivo.</p>
-    <h2>2. Micrófono</h2>
-    <p>Sonder usa el micrófono únicamente para grabar notas de voz a tu solicitud. Los archivos de audio se guardan localmente y nunca se envían a servidores externos.</p>
-    <h2>3. Ubicación</h2>
-    <p>Sonder usa el GPS para anclar tus notas de voz a un lugar específico. Los datos de ubicación se guardan localmente y nunca se transmiten fuera de la app.</p>
-    <h2>4. Reconocimiento de Voz</h2>
-    <p>Sonder transcribe tu voz en el dispositivo usando el framework de reconocimiento de voz de Apple para detectar tu estado de ánimo y sugerir etiquetas. Las transcripciones se guardan localmente y nunca se envían a servidores externos.</p>
-    <h2>5. iCloud</h2>
-    <p>Si tienes iCloud activado, Sonder puede usar tu almacenamiento privado de iCloud para hacer copias de seguridad. Solo tú puedes acceder a estos datos, regidos por la política de privacidad de Apple.</p>
-    <h2>6. Eliminación de Datos</h2>
-    <p>Puedes eliminar cualquier Echo en cualquier momento desde la app. Desinstalar la app elimina todos los datos guardados localmente.</p>
-    <h2>7. Sin Analíticas, Sin Publicidad</h2>
-    <p>Sonder no contiene SDKs publicitarios, herramientas de análisis ni seguimiento de terceros de ningún tipo.</p>
-    <h2>8. Contacto</h2>
-    <p>¿Preguntas? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
-  </section>
-
-  <!-- Français -->
-  <section class="lang" id="lang-fr" lang="fr">
-    <p><em>Sonder</em> respecte votre vie privée. Cette politique explique quelles informations peuvent être traitées lorsque vous utilisez l'app.</p>
-    <h2>1. Collecte de Données</h2>
-    <p>Sonder ne collecte, ne stocke et ne transmet <strong>aucune</strong> donnée personnelle à des serveurs externes. Tous vos mémos vocaux, positions, humeurs et tags restent sur votre appareil.</p>
-    <h2>2. Microphone</h2>
-    <p>Sonder utilise le microphone uniquement pour enregistrer des mémos vocaux à votre demande. Les fichiers audio sont stockés localement et ne sont jamais envoyés à des serveurs externes.</p>
-    <h2>3. Localisation</h2>
-    <p>Sonder utilise le GPS pour ancrer vos mémos vocaux à un endroit précis. Les données de localisation sont stockées localement et ne sont jamais transmises en dehors de l'app.</p>
-    <h2>4. Reconnaissance Vocale</h2>
-    <p>Sonder transcrit votre voix sur l'appareil en utilisant le framework de reconnaissance vocale d'Apple pour détecter votre humeur et suggérer des tags. Les transcriptions sont stockées localement et ne sont jamais envoyées à des serveurs externes.</p>
-    <h2>5. iCloud</h2>
-    <p>Si vous avez iCloud activé, Sonder peut utiliser votre espace iCloud privé pour sauvegarder vos données. Seul vous pouvez y accéder, conformément à la politique de confidentialité d'Apple.</p>
-    <h2>6. Suppression des Données</h2>
-    <p>Vous pouvez supprimer n'importe quel Echo à tout moment depuis l'app. Désinstaller l'app supprime toutes les données stockées localement.</p>
-    <h2>7. Pas d'Analytique, Pas de Publicité</h2>
-    <p>Sonder ne contient aucun SDK publicitaire, aucun outil d'analyse ni aucun suivi tiers.</p>
-    <h2>8. Contact</h2>
-    <p>Questions ? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
-  </section>
-
-  <!-- Deutsch -->
-  <section class="lang" id="lang-de" lang="de">
-    <p><em>Sonder</em> respektiert deine Privatsphäre. Diese Richtlinie erklärt, welche Informationen bei der Nutzung der App verarbeitet werden können.</p>
-    <h2>1. Datenerfassung</h2>
-    <p>Sonder erfasst, speichert oder überträgt <strong>keine</strong> personenbezogenen Daten an externe Server. Alle deine Sprachmemos, Standorte, Stimmungen und Tags bleiben auf deinem Gerät.</p>
-    <h2>2. Mikrofon</h2>
-    <p>Sonder verwendet das Mikrofon ausschließlich zur Aufnahme von Sprachmemos auf deine Anfrage hin. Audiodateien werden lokal gespeichert und nie an externe Server übertragen.</p>
-    <h2>3. Standort</h2>
-    <p>Sonder verwendet GPS, um deine Sprachmemos an einem bestimmten Ort zu verankern. Standortdaten werden lokal gespeichert und nie außerhalb der App übertragen.</p>
-    <h2>4. Spracherkennung</h2>
-    <p>Sonder transkribiert deine Stimme auf dem Gerät mithilfe des Spracherkennungs-Frameworks von Apple, um deine Stimmung zu erkennen und Tags vorzuschlagen. Transkriptionen werden lokal gespeichert und nie an externe Server gesendet.</p>
-    <h2>5. iCloud</h2>
-    <p>Wenn iCloud aktiviert ist, kann Sonder deinen privaten iCloud-Speicher für Backups nutzen. Nur du hast Zugriff auf diese Daten, geregelt durch Apples Datenschutzrichtlinie.</p>
-    <h2>6. Datenlöschung</h2>
-    <p>Du kannst jeden Echo jederzeit in der App löschen. Das Deinstallieren der App entfernt alle lokal gespeicherten Daten von deinem Gerät.</p>
-    <h2>7. Keine Analysen, Keine Werbung</h2>
-    <p>Sonder enthält keine Werbe-SDKs, keine Analysetools und kein Drittanbieter-Tracking.</p>
-    <h2>8. Kontakt</h2>
-    <p>Fragen? <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
-  </section>
-
-  <hr />
-  <p style="font-size:14px;color:#888;">© 2026 Gabriele Monte. All rights reserved.</p>
-
   <script>
-    const switchers = document.querySelectorAll('.lang-btn');
-    const langs = document.querySelectorAll('.lang');
-    function activate(lang){
-      switchers.forEach(b=>{
-        const on = b.dataset.lang === lang;
-        b.classList.toggle('active', on);
-        b.setAttribute('aria-selected', on ? 'true' : 'false');
+    const select = document.getElementById('languageSelect');
+    const sections = document.querySelectorAll('.lang-content');
+
+    function setLanguage(lang) {
+      sections.forEach(section => {
+        section.classList.toggle('active', section.dataset.lang === lang);
       });
-      langs.forEach(s=>s.classList.toggle('active', s.id === 'lang-'+lang));
       document.documentElement.lang = lang;
+      localStorage.setItem('beat-the-tower-lang', lang);
     }
-    switchers.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.lang)));
-    const preferred = (navigator.language || 'en').slice(0,2);
-    if(['en','it','es','fr','de'].includes(preferred)) activate(preferred);
+
+    const savedLang = localStorage.getItem('beat-the-tower-lang');
+    if (savedLang) {
+      select.value = savedLang;
+      setLanguage(savedLang);
+    } else {
+      setLanguage('en');
+    }
+
+    select.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
   </script>
 </body>
 </html>
